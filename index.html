@@ -10,7 +10,7 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #fff6e1;
       color: #333;
     }
     header {
@@ -20,10 +20,16 @@
       color: #fff;
       padding: 40px 20px;
       text-align: center;
+      position: relative;
+    }
+    header img.logo {
+      max-height: 120px;
+      margin-bottom: 20px;
     }
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+      color: #d4af37;
     }
     section {
       padding: 40px 20px;
@@ -32,21 +38,21 @@
       background-color: #fff;
       margin-bottom: 20px;
     }
-    h2 {
-      color: #444;
+    h2, h3 {
+      color: #d4af37;
     }
     ul {
       padding-left: 20px;
     }
     footer {
-      background-color: #111;
+      background-color: #000;
       color: #fff;
       text-align: center;
       padding: 20px;
     }
     .cta {
       display: block;
-      background-color: #1e90ff;
+      background-color: #d4af37;
       color: white;
       padding: 15px;
       margin-top: 20px;
@@ -60,6 +66,34 @@
       top: 20px;
       right: 20px;
     }
+    input, textarea, select, button {
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    form {
+      margin-top: 20px;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #d4af37;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -67,6 +101,7 @@
     <a href="#" onclick="switchLang('it')">🇮🇹 Italiano</a> | <a href="#" onclick="switchLang('en')">🇬🇧 English</a>
   </div>
   <header>
+    <img src="https://raw.githubusercontent.com/tuo-user/tuo-repo/main/logo.png" alt="Capital Asset Florence Logo" class="logo" />
     <h1 id="title">Capital Asset Florence</h1>
     <p id="subtitle">Your gateway to strategic real estate & business investments in Tuscany</p>
   </header>
@@ -107,6 +142,24 @@
     <p>Email: <strong>capitalassetflorence@gmail.com</strong></p>
     <p>Phone / WhatsApp: <strong>+39 352 0290 333</strong></p>
     <p>Based in Florence - available for international clients</p>
+    <form action="mailto:capitalassetflorence@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Nome</label>
+      <input type="text" name="name" required />
+
+      <label for="city">Città</label>
+      <input type="text" name="city" required />
+
+      <label for="country">Nazione</label>
+      <input type="text" name="country" required />
+
+      <label for="phone">Telefono</label>
+      <input type="tel" name="phone" required />
+
+      <label for="email">Mail</label>
+      <input type="email" name="email" required />
+
+      <button type="submit">Invia</button>
+    </form>
   </section>
   <footer>
     &copy; 2025 Capital Asset Florence - All Rights Reserved

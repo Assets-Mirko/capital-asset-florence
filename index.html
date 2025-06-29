@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capital Asset Florence</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/View_of_Florence_from_Piazzale_Michelangelo_%28cropped%29.jpg/1920px-View_of_Florence_from_Piazzale_Michelangelo_%28cropped%29.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #444;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .cta {
+      display: block;
+      background-color: #1e90ff;
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="#" onclick="switchLang('it')">🇮🇹 Italiano</a> | <a href="#" onclick="switchLang('en')">🇬🇧 English</a>
+  </div>
+  <header>
+    <h1 id="title">Capital Asset Florence</h1>
+    <p id="subtitle">Your gateway to strategic real estate & business investments in Tuscany</p>
+  </header>
+  <section id="intro-en">
+    <h2>Welcome to Capital Asset Florence</h2>
+    <p>
+      We are a Florence-based boutique consultancy specializing in high-return real estate and business investment opportunities.
+      Our multidisciplinary team includes legal experts in cross-border operations and project finance, offering turnkey solutions tailored for foreign investors.
+    </p>
+    <h3>Our integrated services include:</h3>
+    <ul>
+      <li>Legal support for international transactions</li>
+      <li>Tax optimization and fiscal benefits</li>
+      <li>Turnkey project setup and management</li>
+      <li>Project financial analysis and planning</li>
+      <li>Access to high-yield, off-market strategic assets</li>
+    </ul>
+    <a href="#contact" class="cta">Get in Touch</a>
+  </section>
+  <section id="intro-it" style="display:none;">
+    <h2>Benvenuto su Capital Asset Florence</h2>
+    <p>
+      Siamo una boutique di consulenza con sede a Firenze, specializzata in investimenti immobiliari e aziendali ad alto rendimento.
+      Il nostro team comprende esperti legali in operazioni estere e project finance, offrendo soluzioni chiavi in mano per investitori stranieri.
+    </p>
+    <h3>I nostri servizi integrati includono:</h3>
+    <ul>
+      <li>Supporto legale per operazioni internazionali</li>
+      <li>Ottimizzazione fiscale e agevolazioni</li>
+      <li>Gestione e impostazione completa dell’operazione</li>
+      <li>Analisi finanziaria e pianificazione del progetto</li>
+      <li>Accesso ad asset strategici fuori mercato ad alto rendimento</li>
+    </ul>
+    <a href="#contact" class="cta">Contattaci</a>
+  </section>
+  <section id="contact">
+    <h2>Contact / Contatti</h2>
+    <p>Email: <strong>capitalassetflorence@gmail.com</strong></p>
+    <p>Phone / WhatsApp: <strong>+39 352 0290 333</strong></p>
+    <p>Based in Florence - available for international clients</p>
+  </section>
+  <footer>
+    &copy; 2025 Capital Asset Florence - All Rights Reserved
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      const en = document.getElementById('intro-en');
+      const it = document.getElementById('intro-it');
+      const subtitle = document.getElementById('subtitle');
+
+      if (lang === 'it') {
+        en.style.display = 'none';
+        it.style.display = 'block';
+        subtitle.textContent = 'Il tuo punto d’accesso ad asset strategici e ad alto rendimento in Toscana';
+      } else {
+        en.style.display = 'block';
+        it.style.display = 'none';
+        subtitle.textContent = 'Your gateway to strategic real estate & business investments in Tuscany';
+      }
+    }
+  </script>
+</body>
+</html>
